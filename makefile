@@ -11,8 +11,9 @@ main.o: main.c display.h draw.h ml6.h
 draw.o: draw.c draw.h display.h ml6.h
 	$(CC) $(CFLAGS) -c draw.c
 
-dsiplay.o: display.c display.h ml6.h
+display.o: display.c display.h ml6.h
 	$(CC) $(CFLAGS) -c display.c
-
+run: all
+	./main
 clean:
 	rm *.o *~
